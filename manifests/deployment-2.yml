@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "demodcaks"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "demodcaks"
+    spec:
+      containers:
+        - name: "demodcaks"
+          image: "demodcacr.azurecr.io/demodcaks"
+          ports:
+          - containerPort: 80
